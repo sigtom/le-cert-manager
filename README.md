@@ -198,6 +198,9 @@ Now that we have our process working, and we've confirmed that certificates and 
 
 We will need to add 2 more files, a `clusterissuer-prod.yaml` poiting to the prod endpoint, and a `certificate-prod.yaml`.  Let's get those setup:
 
+`clusterissuer-prod.yaml`
+
+
 ```yaml
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
