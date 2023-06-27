@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: acme-certificate-prod
+  namespace: openshift-ingress
+spec:
+  secretName: acme-certificate-secret-prod
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - 'YOUR_DOMAIN'
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth

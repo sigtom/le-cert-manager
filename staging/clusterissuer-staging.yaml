@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-staging
+spec:
+  acme:
+    # Use the Let's Encrypt staging environment for testing
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: 'YOUR_EMAIL_ADDRESS'
+    privateKeySecretRef:
+      name: letsencrypt-staging
+    solvers:
+    - dns01:
+        cloudflare:
+          email: 'YOUR_CLOUDFLARE_EMAIL_ADDRESS'
+          apiKeySecretRef:
+            name: cloudflare-api-key
+            key: api-key
