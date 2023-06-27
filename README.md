@@ -202,14 +202,13 @@ We will need to add 2 more files, a `clusterissuer-prod.yaml` poiting to the pro
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: letsencrypt-staging
+  name: letsencrypt-prod
 spec:
   acme:
-    # Use the Let's Encrypt staging environment for testing
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     email: 'YOUR_EMAIL_ADDRESS'
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt-prod
     solvers:
     - dns01:
         cloudflare:
