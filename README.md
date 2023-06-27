@@ -283,5 +283,5 @@ NAME                               TYPE                                  DATA   
 acme-certificate-secret-prod       kubernetes.io/tls                     2      67d
 ```
 
-Use the previously provided commands to review the prod certificate, and confirm its been issued from the prod endpoint, and is include the domain(s) you requested. 
+Use the previously provided commands to review the prod certificate, and confirm its been issued from the prod endpoint, and it include the domain(s) you requested. 
 
